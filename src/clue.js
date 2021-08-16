@@ -52,7 +52,7 @@ const suspectsArray = [
     description: 'She is from a wealthy family and uses her status and money to earn popularity',
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue'} },
-
+    
  { 
     mrMustard: {
     firstName: 'Jack',
@@ -106,11 +106,10 @@ function selectRandom(array) {
 }
 
 function pickMystery() {
-let misteryEnvelope = {};
-  misteryEnvelope.weapon = selectRandom(weaponsArray);
-  misteryEnvelope.room = selectRandom(roomsArray);
-  misteryEnvelope.suspect = selectRandom(suspectsArray);
-  return misteryEnvelope;
+  let suspect = selectRandom(suspectsArray);
+  let weapon = selectRandom(weaponArray);
+  let room = selectRandom(roomArray);
+  return {suspect, weapon, room};
   }
 
 // ITERATION 3
